@@ -14,6 +14,15 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+  if a==0 && b==0 && c==0
+    raise TriangleError, "Side's sizes can't be =0"
+  end
+  if a<0 || b<0 || c<0
+    raise TriangleError, "Sides can't be < 0'"
+  end
+  if (a+c)<=b || (a+b)<=c || (b+c)<=a
+    raise TriangleError, "2 sides can't be < than another one"
+  end
   if a==b && b==c
     :equilateral
   elsif a==b || b==c || a==c
@@ -26,4 +35,5 @@ end
 
 # Error class used in part 2.  No need to change this code.
 class TriangleError < StandardError
+
 end
