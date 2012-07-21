@@ -1,0 +1,4 @@
+= Complete Koans tests
+
+== Made for RubyGarage
+
