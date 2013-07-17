@@ -13,15 +13,11 @@
 # and
 #   about_triangle_project_2.rb
 #
+
+
 def triangle(a, b, c)
-  if a==0 && b==0 && c==0
-    raise TriangleError, "Side's sizes can't be =0"
-  end
-  if a<0 || b<0 || c<0
-    raise TriangleError, "Sides can't be < 0'"
-  end
-  if (a+c)<=b || (a+b)<=c || (b+c)<=a
-    raise TriangleError, "2 sides can't be < than another one"
+if a<=0 || b<=0 || c<=0 || a+b <= c || a+c <= b || b+c <= a 
+    raise TriangleError
   end
   if a==b && b==c
     :equilateral
